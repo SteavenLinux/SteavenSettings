@@ -1,0 +1,10 @@
+[Unit]
+Description=Set Headset Volume on User Login
+After=default.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'amixer -c headset set PCM 100% || true && amixer -c headset set PCM,1 100% || true && amixer -c Headset set PCM 100% || true && amixer -c Headset set PCM,1 100% || true'
+
+[Install]
+WantedBy=default.target
