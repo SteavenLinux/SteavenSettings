@@ -1,2 +1,51 @@
 # SteavenSettings
- 
+This repository contains configuration files that tweak sysctl values, add udev rules to automatically set schedulers, and provide additional optimizations.
+
+## udev rules
+- Audio latency
+- SATA Active Link Power Management for HDD to prioritize max performance 
+- IO schedulers, automatic selection schedulers depends on your HW - SATA SSD, NVME and HDD.
+- NVIDIA, load, unload modules and set-up power management. 
+
+## sysctl
+- Fixs Game Compatibilty Problems
+
+## modprobe
+- NVIDIA and enable direct rendering
+- Force using of the amdgpu driver for Southern Islands (GCN 1.0+) and Sea Islands (GCN 2.0+).
+- v4l2loopback config For obs virutal Camera support
+- kvmfr config for Looking Glass
+
+## systemd
+- Reduce Systemd start and stop service wait time, start to 15s and stop to 10s
+- Redcuce journal size to 50M
+- Reduce user@service stop time from 120s to 10s
+- Headset fix script for system and user
+
+## udisks2
+- Custom Default mount options
+- ntfs has `uid=1000,gid=1000,rw,user,exec,umask=000,windows_names,nofail,nosuid,nodev,x-gvfs-show`
+- btrfs has `autodefrag,space_cache=v2,noatime,nodiratime,commit=120,nofail,nosuid,nodev,x-gvfs-show,rw,user,exec`
+- ext4 has `noatime,nodiratime,commit=120,nofail,nosuid,nodev,x-gvfs-show,rw,user,exec`
+
+## grub
+- Improved Cpu Mitigations
+- Distrust Cpu
+- Enabled Iommu support
+
+## environment
+- Set default cli editor to Nano
+- Make firefox run using xwayland on wayland to fix crashs when using nvidia drivers 555
+- Enable mangohud and obs vkcapture and vkbaslt by default
+- Incress shader cache size and keep old one
+
+## Scripts
+- `amd-gpu-run` to run apps using amd gpu
+- `intel-gpu-run` to run apps using intel gpu
+- `nouveau-gpu-run` to run apps using nouveau gpu
+- `nvidia-gpu-run` to run apps using nvidia gpu
+
+
+# Installtion
+
+run install.sh
