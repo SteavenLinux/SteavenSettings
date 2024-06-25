@@ -6,6 +6,14 @@ This repository contains configuration files that tweak sysctl values, add udev 
 - SATA Active Link Power Management for HDD to prioritize max performance 
 - IO schedulers, automatic selection schedulers depends on your HW - SATA SSD, NVME and HDD.
 - NVIDIA, load, unload modules and set-up power management. 
+- Fix headset on connect
+- Disable nintdido switch for android controllers to make it use xbox mode
+- Enable Sunshine app
+- Arduino Support
+- Show intel cpu wats in mangohud
+- Make cpu run at max mhz when changer is connected and when its discconted then run cpu at power save
+- Use ntfs3 drivers by default
+
 
 ## sysctl
 - Fixs Game Compatibilty Problems
