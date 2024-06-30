@@ -15,6 +15,8 @@ This repository contains configuration files that tweak sysctl values, add udev 
 - Use ntfs3 drivers by default
 - Zram 16GB (add `/dev/zram0 none swap defaults,pri=100 0 0` in `/etc/fstab` for it to work)
 
+## makepkg.conf.d
+- MAKEFLAGS to use all cpu cores
 
 ## sysctl
 - Fixs Game Compatibilty Problems
