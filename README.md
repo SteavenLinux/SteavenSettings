@@ -13,6 +13,7 @@ This repository contains configuration files that tweak sysctl values, add udev 
 - Show intel cpu wats in mangohud
 - Make cpu run at max mhz when changer is connected and when its discconted then run cpu at power save
 - Use ntfs3 drivers by default
+- Zram 16GB (add `/dev/zram0 none swap defaults,pri=100 0 0` in `/etc/fstab` for it to work)
 
 
 ## sysctl
