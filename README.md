@@ -27,6 +27,12 @@ This repository contains configuration files that tweak sysctl values, add udev 
 - v4l2loopback config For obs virutal Camera support
 - kvmfr config for Looking Glass
 
+## wireplumber
+- Disable Audio Suspension to reduce Audio Delay
+
+## NetworkManager
+- Disable Wifi Sleep to reduce Wifi Delay
+
 ## systemd
 - Reduce Systemd start and stop service wait time, start to 15s and stop to 10s
 - Redcuce journal size to 50M
@@ -55,6 +61,7 @@ This repository contains configuration files that tweak sysctl values, add udev 
 - `intel-gpu-run` to run apps using intel gpu
 - `nouveau-gpu-run` to run apps using nouveau gpu
 - `nvidia-gpu-run` to run apps using nvidia gpu
+- `killpicom` to kill picom then reopen it put it in steam game argements like this `killpicom %command%`
 
 
 # Installtion

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Forcefully kill any running picom instances
+killall -9 picom
+
+# Execute any additional arguments passed to the script
+"$@"
+
+# Start picom in the background and disown it
+picom & disown
