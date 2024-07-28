@@ -27,8 +27,13 @@ This repository contains configuration files that tweak sysctl values, add udev 
 - v4l2loopback config For obs virutal Camera support
 - kvmfr config for Looking Glass
 
-## wireplumber
-- Disable Audio Suspension to reduce Audio Delay
+## pipewire.d
+- Allowed rates only is 48kbps
+- Changed default.clock.quantum to 2058
+- Changed default.clock.min-quantum to 1024
+
+## conf.d
+- libvirt-guests Config to Stop vm correcntly on Linux Shutdown
 
 ## NetworkManager
 - Disable Wifi Sleep to reduce Wifi Delay
@@ -62,7 +67,6 @@ This repository contains configuration files that tweak sysctl values, add udev 
 - `nouveau-gpu-run` to run apps using nouveau gpu
 - `nvidia-gpu-run` to run apps using nvidia gpu
 - `killpicom` to kill picom then reopen it put it in steam game argements like this `killpicom %command%`
-
 
 # Installtion
 
