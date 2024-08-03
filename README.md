@@ -48,7 +48,7 @@ This repository contains configuration files that tweak sysctl values, add udev 
 - Custom Default mount options
 - ntfs has `uid=1000,gid=1000,rw,user,exec,umask=000,windows_names,nofail,nosuid,nodev,x-gvfs-show`
 - btrfs has `autodefrag,space_cache=v2,noatime,nodiratime,commit=120,nofail,nosuid,nodev,x-gvfs-show,rw,user,exec`
-- ext4 has `noatime,nodiratime,commit=120,nofail,nosuid,nodev,x-gvfs-show,rw,user,exec`
+- ext4 has `noatime,nodiratime,nosuid,nodev,x-gvfs-show,rw,exec`
 
 ## grub
 - Improved Cpu Mitigations
