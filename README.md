@@ -43,7 +43,7 @@ This repository contains configuration files that tweak sysctl values, add udev 
 - Redcuce journal size to 50M
 - Reduce user@service stop time from 120s to 10s
 - Headset fix script for system and user
-- Disable Systemd Core Dumping to prevent / disk i/o usage from beening at 100% when anything wants to crash
+- Disable Systemd Core Dumping to prevent disk i/o usage from beening at 100% when anything wants to crash
 
 ## udisks2
 - Custom Default mount options
