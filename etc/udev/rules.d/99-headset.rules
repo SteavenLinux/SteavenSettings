@@ -1,1 +1,0 @@
-SUBSYSTEM=="usb", ATTR{idVendor}=="040b", ATTR{idProduct}=="0897", ACTION=="add", RUN+="/bin/sh -c 'amixer -c headset set PCM 100% && amixer -c headset set PCM,1 100% && amixer -c Headset set PCM 100% && amixer -c Headset set PCM,1 100%'"

@@ -1,22 +1,26 @@
 # SteavenSettings
 This repository contains configuration files that tweak sysctl values, add udev rules to automatically set schedulers, and provide additional optimizations.
 
+That can work on Arch Linux and Fedora.
+
+## My pc and laptop Settings
+- [PC-PersonalSettings](https://github.com/SteavenLinux/PC-PersonalSettings)
+- [Laptop-PersonalSettings](https://github.com/SteavenLinux/Laptop-PersonalSettings)
+
+## More Settings
+- [ArchSettings](https://github.com/SteavenLinux/ArchSettings)
+- [FedoraSettings](https://github.com/SteavenLinux/FedoraSettings)
+
 ## udev rules
 - Audio latency
 - SATA Active Link Power Management for HDD to prioritize max performance 
 - IO schedulers, automatic selection schedulers depends on your HW - SATA SSD, NVME and HDD.
 - NVIDIA, load, unload modules and set-up power management. 
-- Fix headset on connect
-- Disable nintdido switch for android controllers to make it use xbox mode
 - Enable Sunshine app
 - Arduino Support
 - Show intel cpu wats in mangohud
 - Make cpu run at max mhz when changer is connected and when its discconted then run cpu at power save
 - Use ntfs3 drivers by default
-- Zram 16GB (add `/dev/zram0 none swap defaults,pri=100 0 0` in `/etc/fstab` for it to work)
-
-## makepkg.conf.d
-- MAKEFLAGS to use all cpu cores
 
 ## sysctl
 - Fixs Game Compatibilty Problems
@@ -42,7 +46,6 @@ This repository contains configuration files that tweak sysctl values, add udev 
 - Reduce Systemd start and stop service wait time, start to 15s and stop to 10s
 - Redcuce journal size to 50M
 - Reduce user@service stop time from 120s to 10s
-- Headset fix script for system and user
 - Disable Systemd Core Dumping to prevent disk i/o usage from beening at 100% when anything wants to crash
 
 ## udisks2
