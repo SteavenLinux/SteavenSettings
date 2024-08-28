@@ -31,11 +31,6 @@ That can work on Arch Linux and Fedora.
 - v4l2loopback config For obs virutal Camera support
 - kvmfr config for Looking Glass
 
-## pipewire.d
-- Allowed rates only is 48kbps
-- Changed default.clock.quantum to 2058
-- Changed default.clock.min-quantum to 1024
-
 ## conf.d
 - libvirt-guests Config to Stop vm correcntly on Linux Shutdown
 
@@ -61,9 +56,6 @@ That can work on Arch Linux and Fedora.
 
 ## environment
 - Set default cli editor to Nano
-- Make firefox run using xwayland on wayland to fix crashs when using nvidia drivers 555
-- Enable mangohud and obs vkcapture and vkbaslt by default
-- Incress shader cache size and keep old one
 
 ## Scripts
 - `amd-gpu-run` to run apps using amd gpu
@@ -71,6 +63,7 @@ That can work on Arch Linux and Fedora.
 - `nouveau-gpu-run` to run apps using nouveau gpu
 - `nvidia-gpu-run` to run apps using nvidia gpu
 - `killpicom` to kill picom then reopen it put it in steam game argements like this `killpicom %command%`
+- `game-run` to run game with this envs Enable mangohud and obs vkcapture and vkbaslt by default, Incress shader cache size and keep old one
 
 # Installtion
 
