@@ -65,7 +65,7 @@ That can work on Arch Linux and Fedora.
 - `nouveau-gpu-run` to run apps using nouveau gpu
 - `nvidia-gpu-run` to run apps using nvidia gpu
 - `killpicom` to kill picom then reopen it put it in steam game argements like this `killpicom %command%`
-- `game-run` to run game with this envs Enable mangohud and obs vkcapture and vkbaslt by default, Incress shader cache size and keep old one
+- `game-run` to run game with this envs Enable mangohud and obs vkcapture and vkbaslt by default, Incress shader cache size and keep old one, forces vsync on nvidia gpus
 
 # Installtion
 
