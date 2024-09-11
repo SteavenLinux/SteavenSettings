@@ -27,6 +27,7 @@ That can work on Arch Linux and Fedora.
 
 ## modprobe
 - NVIDIA and enable direct rendering
+- NVIDIA enable brightness control
 - Force using of the amdgpu driver for Southern Islands (GCN 1.0+) and Sea Islands (GCN 2.0+).
 - Enable amndgpu Control
 - v4l2loopback config For obs virutal Camera support
