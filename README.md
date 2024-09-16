@@ -67,6 +67,9 @@ That can work on Arch Linux and Fedora.
 - `killpicom` to kill picom then reopen it put it in steam game argements like this `killpicom %command%`
 - `game-run` to run game with this envs Enable mangohud and obs vkcapture and vkbaslt by default, Incress shader cache size and keep old one, forces vsync on nvidia gpus
 
+# Polkit Rules
+- Shutdown and Reboot without needing to use sudo
+
 # Installtion
 
 run install.sh
