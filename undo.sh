@@ -38,3 +38,4 @@ sudo rm -rf /etc/udev/rules.d/99-ntsync.rules
 sudo rm -rf /etc/udisks2/mount_options.conf
 sudo rm -rf /etc/chrony.conf
 sudo rm -rf /etc/makepkg.conf.d/use-all-cores.conf
+sudo rm -rf /etc/polkit-1/rules.d/99-shutdown-reboot.rules
