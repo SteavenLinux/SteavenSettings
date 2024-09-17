@@ -16,7 +16,6 @@ That can work on Arch Linux and Fedora.
 - SATA Active Link Power Management for HDD to prioritize max performance 
 - IO schedulers, automatic selection schedulers depends on your HW - SATA SSD, NVME and HDD.
 - NVIDIA, load, unload modules and set-up power management. 
-- Enable Sunshine app
 - Arduino Support
 - Show intel cpu wats in mangohud
 - Make cpu run at max mhz when changer is connected and when its discconted then run cpu at power save

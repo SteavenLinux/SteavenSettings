@@ -28,7 +28,6 @@ sudo rm -rf /etc/systemd/system.conf.d/00-timeout.conf
 sudo rm -rf /etc/udev/rules.d/40-hpet-permissions.rules
 sudo rm -rf /etc/udev/rules.d/50-sata.rules
 sudo rm -rf /etc/udev/rules.d/60-ioschedulers.rules
-sudo rm -rf /etc/udev/rules.d/60-sunshine.rules
 sudo rm -rf /etc/udev/rules.d/71-nvidia.rules
 sudo rm -rf /etc/udev/rules.d/90-arduino.rules
 sudo rm -rf /etc/udev/rules.d/99-cpu-freq.rules
