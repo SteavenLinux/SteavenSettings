@@ -1,0 +1,14 @@
+polkit.addRule(function(action, subject) {
+    if ((action.id == "org.freedesktop.Flatpak.app-install" ||
+         action.id == "org.freedesktop.Flatpak.runtime-install"||
+         action.id == "org.freedesktop.Flatpak.app-uninstall" ||
+         action.id == "org.freedesktop.Flatpak.metadata-update" ||
+         action.id == "org.freedesktop.Flatpak.runtime-uninstall" ||
+         action.id == "org.freedesktop.Flatpak.modify-repo") &&
+        subject.active == true &&
+        subject.isInGroup("wheel")) {
+            return polkit.Result.YES;
+    }
+
+    return polkit.Result.NOT_HANDLED;
+});

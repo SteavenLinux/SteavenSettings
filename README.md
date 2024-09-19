@@ -68,6 +68,7 @@ That can work on Arch Linux and Fedora.
 
 # Polkit Rules
 - Shutdown and Reboot without needing to use sudo
+- Flatpak without needing to use sudo
 
 # Installtion
 
