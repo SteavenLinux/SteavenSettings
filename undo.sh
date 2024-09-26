@@ -34,6 +34,7 @@ sudo rm -rf /etc/udev/rules.d/99-cpu-freq.rules
 sudo rm -rf /etc/udev/rules.d/99-intel-cpu-watts-fix.rules
 sudo rm -rf /etc/udev/rules.d/99-ntfs3_by_default.rules
 sudo rm -rf /etc/udev/rules.d/99-ntsync.rules
+sudo rm -rf /etc/udev/rules.d/30-zram.rules
 sudo rm -rf /etc/udisks2/mount_options.conf
 sudo rm -rf /etc/chrony.conf
 sudo rm -rf /etc/makepkg.conf.d/use-all-cores.conf

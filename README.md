@@ -43,6 +43,8 @@ That can work on Arch Linux and Fedora.
 - Redcuce journal size to 50M
 - Reduce user@service stop time from 120s to 10s
 - Disable Systemd Core Dumping to prevent disk i/o usage from beening at 100% when anything wants to crash
+- Zram Generator config
+- Timesync config for time.google.com
 
 ## udisks2
 - Custom Default mount options
