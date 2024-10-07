@@ -20,6 +20,7 @@ That can work on Arch Linux and Fedora.
 - Show intel cpu wats in mangohud
 - Make cpu run at max mhz when changer is connected and when its discconted then run cpu at power save
 - Use ntfs3 drivers by default
+- Disable usb Suspend / sleeping
 
 ## sysctl
 - Fixs Game Compatibilty Problems
