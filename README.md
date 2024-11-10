@@ -26,7 +26,7 @@ That can work on Arch Linux and Fedora.
 - Fixs Game Compatibilty Problems
 
 ## modprobe
-- NVIDIA and enable direct rendering
+- NVIDIA improvements
 - NVIDIA enable brightness control
 - Force using of the amdgpu driver for Southern Islands (GCN 1.0+) and Sea Islands (GCN 2.0+).
 - Enable amndgpu Control
