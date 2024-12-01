@@ -1,10 +1,30 @@
 #!/bin/bash
+
+# Set common environment variables
 export __GL_SHADER_DISK_CACHE=1
 export __GL_SHADER_DISK_CACHE_SIZE=100000000000
 export __GL_SHADER_DISK_CACHE_SKIP_CLEANUP=1
 export __GL_SYNC_TO_VBLANK=1
-export MANGOHUD=1
 export OBS_VKCAPTURE=1
 export ENABLE_VKBASALT=1
 export DXVK_HUD=compiler
-exec mangohud gamemoderun "$@"
+
+# Check for '--no-mangohud' flag
+NO_MANGOHUD=0
+CLEAN_ARGS=()
+for arg in "$@"; do
+    if [ "$arg" == "--no-mangohud" ]; then
+        NO_MANGOHUD=1
+    else
+        CLEAN_ARGS+=("$arg")
+    fi
+done
+
+# Adjust MANGOHUD based on the flag
+if [ "$NO_MANGOHUD" -eq 1 ]; then
+    export MANGOHUD=0
+    exec gamemoderun "${CLEAN_ARGS[@]}"
+else
+    export MANGOHUD=1
+    exec mangohud gamemoderun "${CLEAN_ARGS[@]}"
+fi
