@@ -1,4 +1,6 @@
 #!/bin/bash
 export DRI_PRIME=1
+export LIBVA_DRIVER_NAME=nouveau
+export VDPAU_DRIVER=nouveau
 export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nouveau_icd.i686.json.json:/usr/share/vulkan/icd.d/nouveau_icd.x86_64.json
 exec "$@"
