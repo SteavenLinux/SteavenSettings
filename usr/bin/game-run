@@ -9,22 +9,38 @@ export OBS_VKCAPTURE=1
 export ENABLE_VKBASALT=1
 export DXVK_HUD=compiler
 
-# Check for '--no-mangohud' flag
+# Check for flags
 NO_MANGOHUD=0
+ENABLE_VSYNC=0
 CLEAN_ARGS=()
+
 for arg in "$@"; do
-    if [ "$arg" == "--no-mangohud" ]; then
-        NO_MANGOHUD=1
-    else
-        CLEAN_ARGS+=("$arg")
-    fi
+    case "$arg" in
+        --no-mangohud)
+            NO_MANGOHUD=1
+            ;;
+        --vsync)
+            ENABLE_VSYNC=1
+            ;;
+        *)
+            CLEAN_ARGS+=("$arg")
+            ;;
+    esac
 done
+
+# Apply vsync settings if the flag is enabled
+if [ "$ENABLE_VSYNC" -eq 1 ]; then
+    export STRANGLE_VSYNC=2
+    VSYNC_CMD="strangle -v 2"
+else
+    VSYNC_CMD=""
+fi
 
 # Adjust MANGOHUD based on the flag
 if [ "$NO_MANGOHUD" -eq 1 ]; then
     export MANGOHUD=0
-    exec gamemoderun "${CLEAN_ARGS[@]}"
+    exec gamemoderun $VSYNC_CMD "${CLEAN_ARGS[@]}"
 else
     export MANGOHUD=1
-    exec mangohud gamemoderun "${CLEAN_ARGS[@]}"
+    exec mangohud gamemoderun $VSYNC_CMD "${CLEAN_ARGS[@]}"
 fi
