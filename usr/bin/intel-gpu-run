@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
 export DRI_PRIME=0
 export LIBVA_DRIVER_NAME=iHD
 export VDPAU_DRIVER=va_gl
-export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/intel_icd.i686.json.json:/usr/share/vulkan/icd.d/intel_icd.x86_64.json
+export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/intel_icd.i686.json.json:/usr/share/vulkan/icd.d/intel_icd.x86_64.json:/run/opengl-driver/share/vulkan/icd.d/intel_hasvk_icd.x86_64.json:/run/opengl-driver/share/vulkan/icd.d/intel_icd.x86_64.json
 exec "$@"

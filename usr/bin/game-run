@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Set common environment variables
 export __GL_SHADER_DISK_CACHE=1

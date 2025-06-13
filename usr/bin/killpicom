@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Forcefully kill any running picom instances
 killall -9 picom
