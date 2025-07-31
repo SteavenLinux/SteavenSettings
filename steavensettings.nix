@@ -26,7 +26,7 @@
     DefaultTimeoutStopSec=10s
   '';
 
-  systemd.services."your-service".serviceConfig.TimeoutStopSec = lib.mkDefault "10s";
+  systemd.services."user@".serviceConfig.TimeoutStopSec = lib.mkDefault "10s";
   services.journald.extraConfig = ''
     SystemMaxUse=50M
   '';
@@ -156,8 +156,8 @@
   services.udisks2.settings = {
   "mount_options.conf" = {
     defaults = {
-      ntfs_defaults = "uid=1000,gid=1000,rw,exec,umask=000,windows_names,nofail,nosuid,nodev,x-gvfs-show";
-      btrfs_defaults = "autodefrag,space_cache=v2,noatime,nodiratime,commit=120,nofail,nosuid,nodev,x-gvfs-show,rw,user,exec";
+      ntfs_defaults = "uid=1000,gid=1000,rw,exec,umask=000,windows_names,nosuid,nodev,x-gvfs-show";
+      btrfs_defaults = "autodefrag,space_cache=v2,noatime,nodiratime,commit=120,nosuid,nodev,x-gvfs-show,rw,user,exec";
       ext4_defaults = "noatime,nodiratime,nosuid,nodev,x-gvfs-show,rw,exec";
     };
   };
