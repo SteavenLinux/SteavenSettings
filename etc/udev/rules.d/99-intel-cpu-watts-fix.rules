@@ -1,1 +1,0 @@
-SUBSYSTEM=="cpu", ACTION=="add", RUN+="/bin/bash -c 'if grep -q GenuineIntel /proc/cpuinfo; then chmod o+r /sys/class/powercap/intel-rapl:0/energy_uj; fi'"
