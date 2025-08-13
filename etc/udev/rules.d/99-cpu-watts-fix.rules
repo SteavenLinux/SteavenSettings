@@ -1,3 +1,3 @@
-SUBSYSTEM=="cpu", ACTION=="add", RUN+="/bin/bash -c chmod o+r /sys/class/powercap/intel-rapl:0/energy_uj"
-SUBSYSTEM=="cpu", ACTION=="add", RUN+="/bin/bash -c chmod o+r /sys/devices/virtual/powercap/intel-rapl/intel-rapl:0/energy_uj"
-SUBSYSTEM=="cpu", ACTION=="add", RUN+="/bin/bash -c chmod o+r /sys/devices/virtual/powercap/intel-rapl/intel-rapl:0/intel-rapl:0:0/energy_uj"
+SUBSYSTEM=="powercap", ACTION=="add", RUN+="/bin/chmod o+r /sys/class/powercap/intel-rapl:0/energy_uj"
+SUBSYSTEM=="powercap", ACTION=="add", RUN+="/bin/chmod o+r /sys/devices/virtual/powercap/intel-rapl/intel-rapl:0/energy_uj"
+SUBSYSTEM=="powercap", ACTION=="add", RUN+="/bin/chmod o+r /sys/devices/virtual/powercap/intel-rapl/intel-rapl:0/intel-rapl:0:0/energy_uj"
