@@ -17,6 +17,7 @@
     options nvidia NVreg_RegistryDwords=EnableBrightnessControl=1
     options nvidia_drm modeset=1
     options nvidia NVreg_PreserveVideoMemoryAllocations=1 NVreg_TemporaryFilePath=/var/tmp
+    options nvidia NVreg_RegistryDwords=RmEnableAggressiveVblank=1
     options v4l2loopback exclusive_caps=1 card_label="OBS Virtual Camera"
   '';
 
