@@ -1,0 +1,99 @@
+#!/usr/bin/env bash
+
+set -Eeuo pipefail
+
+echo "========================================="
+echo "       SteavenLinux Drivers Installation"
+echo "========================================="
+echo
+echo "1. AMD GPU"
+echo "2. Intel GPU"
+echo "3. Nvidia GPU GTX 16xx and newer"
+echo "4. Nvidia GPU GTX 10xx and older"
+echo "5. Ryzen CPU"
+echo "6. Game Controllers"
+echo "7. Asus B450 Prime Plus"
+echo
+
+read -rp "Select an option [1-4]: " choice
+echo
+
+case "$choice" in
+    1)
+        echo "Installing AMD GPU drivers..."
+
+        sudo pacman -S --needed --noconfirm \
+            SteavenLinux-Amd-meta
+
+        echo
+        echo "AMD GPU drivers installed successfully."
+        ;;
+
+    2)
+        echo "Installing Intel GPU drivers..."
+
+        sudo pacman -S --needed --noconfirm \
+            SteavenLinux-Intel-meta
+
+        echo
+        echo "Intel GPU drivers installed successfully."
+        ;;
+
+    3)
+        echo "Installing Nvidia GPU drivers..."
+
+        sudo pacman -S --needed --noconfirm \
+            SteavenLinux-Nvidia-meta
+
+        echo
+        echo "Nvidia GPU drivers installed successfully."
+        ;;
+
+    3)
+        echo "Installing Nvidia GPU drivers..."
+
+        sudo pacman -S --needed --noconfirm \
+            SteavenLinux-NvidiaOld-meta
+
+        echo
+        echo "Nvidia GPU drivers installed successfully."
+        ;;
+
+    5)
+        echo "Installing Ryzen CPU drivers..."
+
+        sudo pacman -S --needed --noconfirm \
+            SteavenLinux-Ryzen-meta
+
+        echo
+        echo "Ryzen GPU drivers installed successfully."
+        ;;
+
+    6)
+        echo "Installing Game Controller drivers..."
+
+        sudo pacman -S --needed --noconfirm \
+            SteavenLinux-GameControllers-meta
+
+        echo
+        echo "Game Controller drivers installed successfully."
+        ;;
+
+    7)
+        echo "Installing Asus B450 Prime Plus drivers..."
+
+        sudo pacman -S --needed --noconfirm \
+            SteavenLinux-AsusB450PrimePlus-meta
+
+        echo
+        echo "Asus B450 Prime Plus drivers installed successfully."
+        ;;
+
+    *)
+        echo "Invalid option."
+        exit 1
+        ;;
+esac
+
+echo
+echo "Installation complete."
