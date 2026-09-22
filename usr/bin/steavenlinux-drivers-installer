@@ -49,7 +49,7 @@ case "$choice" in
         echo "Nvidia GPU drivers installed successfully."
         ;;
 
-    3)
+    4)
         echo "Installing Nvidia GPU drivers..."
 
         sudo pacman -S --needed --noconfirm \
