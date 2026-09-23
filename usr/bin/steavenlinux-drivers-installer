@@ -13,6 +13,8 @@ echo "4. Nvidia GPU GTX 10xx and older"
 echo "5. Ryzen CPU"
 echo "6. Game Controllers"
 echo "7. Asus B450 Prime Plus"
+echo "7. Printers"
+echo "8. Audio"
 echo
 
 read -rp "Select an option [1-4]: " choice
@@ -87,6 +89,26 @@ case "$choice" in
 
         echo
         echo "Asus B450 Prime Plus drivers installed successfully."
+        ;;
+
+    8)
+        echo "Installing Printer drivers..."
+
+        sudo pacman -S --needed --noconfirm \
+            SteavenLinux-Printering-meta
+
+        echo
+        echo "Printer drivers installed successfully."
+        ;;
+
+    9)
+        echo "Installing Pipewire..."
+
+        sudo pacman -S --needed --noconfirm \
+            SteavenLinux-Pipwire-meta
+
+        echo
+        echo "Pipewire installed successfully."
         ;;
 
     *)
